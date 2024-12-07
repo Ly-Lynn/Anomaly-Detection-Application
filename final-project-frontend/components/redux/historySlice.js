@@ -19,6 +19,6 @@ export const historySlice = createSlice({
 
 export const { addInferenceResult, resetHistory } = historySlice.actions;
 
-export const selectInferenceHistory = (state) => state.history.history; // Selector to get the history
+export const selectInferenceHistory = (state) => state.history.history;
 
 export default historySlice.reducer;

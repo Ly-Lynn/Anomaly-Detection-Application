@@ -164,7 +164,7 @@ export default function CameraScreen() {
       )}
 
       <View style={styles.buttonContainer}>
-        <Button title="Start Capture" onPress={() => startCaptureInterval(800)} />
+        <Button title="Start Capture" onPress={() => startCaptureInterval(900)} />
         <Button title="Stop Capture" onPress={stopCaptureInterval} />
       </View>
     </View>
