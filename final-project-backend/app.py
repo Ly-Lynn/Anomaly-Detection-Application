@@ -60,5 +60,20 @@ def handle_message(data):
     except Exception as e:
         print(f"Error processing image: {e}")
 
+@app.route('/post_info', methods=['POST'])
+def get_info():
+    try:
+        data = request.get_json()
+        data_module = data.get('dataModule')
+        model = data.get('model')
+        choice = data.get('choice')
+        print(f"Data Module: {data_module}, Model: {model}, Choice: {choice}")
+
+        return jsonify({"message": "Data received successfully", "status": "success"}), 200
+
+    except Exception as e:
+        # Handle any errors
+        return jsonify({"message": f"An error occurred: {str(e)}", "status": "error"}), 500
+
 if __name__ == '__main__':
     socketio.run(app,host= '0.0.0.0', port=5000, debug=True)

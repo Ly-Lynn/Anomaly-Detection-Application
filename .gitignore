@@ -1,2 +1,8 @@
 /OCR-GAN/
 /checkpoints/
+/datasets/
+/final-project-backend/pretrained_models/
+/final-project-backend/data/
+/final-project-backend/database/app.db
+/final-project-backend/datasets/
+/streamlit_app/app.db

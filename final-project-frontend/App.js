@@ -7,18 +7,19 @@ import BeginScreen from './components/screen/BeginScreen';
 import MenuScreen from './components/screen/MenuScreen';
 import CameraInference from './components/screen/CameraScreen';
 import AnalysisScreen from './components/screen/AnalysisScreen';
-
+import ImageInferenceScreen from './components/screen/ImageInference';
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="BeginScreen">
-          <Stack.Screen name="BeginScreen" component={BeginScreen} />
-          <Stack.Screen name="MenuScreen" component={MenuScreen} />
-          <Stack.Screen name="CameraInference" component={CameraInference} />
-          <Stack.Screen name="AnalysisScreen" component={AnalysisScreen} />
+        <Stack.Navigator initialRouteName="Selection Screen - Merry Christmas">
+          <Stack.Screen name="Selection Screen - Merry Christmas" component={BeginScreen} />
+          {/* <Stack.Screen name="Menu Screen" component={MenuScreen} /> */}
+          <Stack.Screen name="Camera Inference" component={CameraInference} />
+          <Stack.Screen name="Image Inference" component={ImageInferenceScreen} />
+          <Stack.Screen name="Analysis Screen" component={AnalysisScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
